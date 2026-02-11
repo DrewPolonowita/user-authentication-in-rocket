@@ -1,0 +1,22 @@
+[package]
+name = "server"
+version = "0.1.0"
+authors = ["Drew Polonowita <drewpolonowita32@gmail.com>"]
+edition = "2024"
+
+[dependencies]
+argon2 = "0.5.3"
+chrono = "0.4.43"
+dotenv = "0.15.0"
+hex = "0.4.3"
+jsonwebtoken = { version = "10.3.0", features = ["aws_lc_rs"] }
+rocket = { version = "0.5.1", features = ["json", "secrets"] }
+rustls = { version = "0.23.36", features = ["ring"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sqlx = { version = "0.8.6", features = ["runtime-tokio-rustls", "postgres", "macros"] }
+tokio = { version = "1.49.0", features = ["full"]}
+password-hash = "0.5"
+rand_core = "0.6"
+log = "0.4.29"
+fern = "0.7.1"
